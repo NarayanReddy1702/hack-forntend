@@ -1,6 +1,6 @@
 // Page1.jsx
 import React, { useState, useEffect } from 'react';
-import GoogleMap from '../components/GoogleMap';
+import DisasterMap from '../components/DisasterMap';
 
 function Page1() {
   // State for alerts
@@ -9,6 +9,39 @@ function Page1() {
     { type: 'Flood', location: 'Indonesia', severity: 'Severe', time: '12 min ago' },
     { type: 'Wildfire', location: 'California, USA', severity: 'Spreading Fast', time: '25 min ago' },
   ]);
+
+  const [disaster, setDisaster] = useState([]);
+  const [error, setError] = useState('');
+  
+
+  useEffect(()=>{
+  
+    try{
+        fetch("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson").then((res)=>{
+            return res.json()
+        }).then((data)=>{
+           setDisaster(data);
+        })
+    }
+    catch(err){
+       console.log(err)
+    }
+     
+      },[])
+    
+
+      try {
+        disaster.features.map((val)=>{
+          console.log(val);
+          
+        })
+      } catch (error) {
+        console.log(error);
+        
+      }
+
+
+  console.log(disaster);
 
   return (
     <div className="bg-black font-sans text-gray-800">
@@ -19,8 +52,8 @@ function Page1() {
         {/* Live Map Section */}
         <section className="md:col-span-2 bg-gray-800 text-white rounded-2xl shadow-xl p-6">
           <h2 className="text-xl font-semibold mb-4">🌍 Live Disaster Map</h2>
-          <div className="w-full h-72 bg-gray-900 rounded-xl flex items-center justify-center text-gray-500">
-           <GoogleMap/>
+          <div className="w-full h-72">
+    <DisasterMap/>
           </div>
         </section>
 

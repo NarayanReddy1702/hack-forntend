@@ -1,31 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import ScrollVelocity from './ScrollVelocity'
 
 const Home = () => {
   const navigate=useNavigate()
   const RedirectQuizPage =()=>{
-     navigate("/Login")
+     navigate("/Dashboard")
   }
 
-  const [users, setUsers] = useState([]);
-  const [error, setError] = useState('');
 
-  useEffect(() => {
-    fetch('http://192.168.61.1:8080/api/user/register')
-      .then((res) => {
-        if (!res.ok) throw new Error('Failed to fetch user data');
-        return res.json();
-      })
-      .then((data) => {
-        setUsers(data); // Assuming data is an array of users
-      })
-      .catch((err) => {
-        setError(err.message);
-      });
-  }, []);
-
-  console.log(users);
   
   return (
 <>
@@ -38,7 +20,7 @@ const Home = () => {
     Get Started
   </button>
 </div>
-<ScrollVelocity/>
+
 </>
   )
 }
