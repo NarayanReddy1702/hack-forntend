@@ -3,6 +3,8 @@ import CommonPage from "../components/Common";
 import Home from "../sections/Home";
 import Login from "../UI/Login";
 import Page1 from "../sections/page1";
+import Regions from "../sections/Regions";
+import Resources from "../sections/Resources";
 
 const router= createBrowserRouter([
     {
@@ -20,6 +22,13 @@ const router= createBrowserRouter([
             {
               path:"/Dashboard",
               element:<Page1/>
+            },
+            {
+                path:"/Regions",
+                element:<Regions/>
+            },{
+                path:"/Resources",
+                element:<Resources/>
             }
         ]
     }
