@@ -11,7 +11,7 @@ const DisasterMap = () => {
 
 
 
-  
+ 
  
   useEffect(() => {
     fetch(
@@ -24,12 +24,12 @@ const DisasterMap = () => {
         setDisasters(disatserData);
         setDataOfDisaster(data)
       })
-      .catch((err) => console.error("Error fetching disasters:", err));
+     .catch((err) => console.error("Error fetching disasters:", err));
       
   }, []);
   
  
-  console.log(dataOfDisaster);
+  
   
   
   return (
