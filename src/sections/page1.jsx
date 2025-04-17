@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import GoogleMap from "../components/GoogleMap";
 import DisasterMap from "../components/Leaflet.jsx";
+import { NavLink } from "react-router-dom";
 
 function Page1() {
   // State for alerts
@@ -41,13 +42,13 @@ function Page1() {
         </section>
 
         <section
-          className="bg-gray-800 rounded-2xl text-white shadow-xl p-6 h-110 overflow-auto"
+          className="bg-gray-800  rounded-xl text-white shadow-xl p-6 py-8 h-110 overflow-auto"
           style={{ scrollbarWidth: "none" }}
         >
           <h2 className="text-xl font-semibold mb-4">🚨 Latest Alerts</h2>
-          <ul id="alert-list" className="space-y-3 text-sm h-full">
+          <ul id="alert-list" className="space-y-6  text-sm h-full">
             {floods.map((flood, index) => (
-              <li key={index} className="border-l-4 border-red-500 pl-3">
+              <li key={index} className="border-l-4 border-blue-600 pl-3">
                 <div className="font-semibold">– {flood.eaAreaName}</div>
                 <div className="text-gray-600 text-xs">
                   {flood.severityLevel} • {flood.timeRaised}
@@ -83,9 +84,9 @@ function Page1() {
           <h2 className="text-xl font-semibold mb-4">🛠 Emergency Resources</h2>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="#" className="text-blue-600 hover:underline">
+              <NavLink to={"/Emergency"} className="text-blue-600 hover:underline">
                 📞 Emergency Hotlines
-              </a>
+              </NavLink>
             </li>
             <li>
               <a href="#" className="text-blue-600 hover:underline">

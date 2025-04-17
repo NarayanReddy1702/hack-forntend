@@ -41,21 +41,21 @@ const DisasterMap = () => {
       
   }, []);
 
-  useEffect(() => {
-    try {
-      floods.map((item) => {
-        const place = item.eaAreaName;
-        fetch(`https://nominatim.openstreetmap.org/search?q=${"Odisha"}&format=json`)
-          .then((res) => res.json())
-          .then(res => {
-            console.log(res);
-            return setAffectedLocationInfo(res)
-          });
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  }, [floods])
+  // useEffect(() => {
+  //   try {
+  //     floods.map((item) => {
+  //       const place = item.eaAreaName;
+  //       fetch(`https://nominatim.openstreetmap.org/search?q=${place}&format=json`)
+  //         .then((res) => res.json())
+  //         .then(res => {
+  //           console.log(res);
+  //            setAffectedLocationInfo([res,...res])
+  //         });
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }, [floods])
 
 
   return (
