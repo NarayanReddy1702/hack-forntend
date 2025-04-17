@@ -37,8 +37,8 @@ const shelters = [
 
 const SafeShelters = () => {
   return (
-    <div className="p-6 mx-auto">
-      <h1 className="text-3xl font-bold text-green-700 mb-6">
+    <div className="lg:px-49 px-6 py-6 mx-auto bg-black">
+      <h1 className="text-2xl lg:text-3xl font-bold text-white mb-6">
         🏠 Safe Shelters Nearby
       </h1>
       <p className="text-gray-600 mb-4">
@@ -46,13 +46,13 @@ const SafeShelters = () => {
         shelters:
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2  mb-6 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {shelters.map((shelter, index) => (
           <div
             key={index}
-            className="border rounded-2xl shadow-md p-4 hover:shadow-xl transition"
+            className="border rounded-2xl shadow-md p-4  pl-6 bg-gray-800 hover:shadow-xl hover:border-1 hover:border-white transition"
           >
-            <h2 className="text-xl font-semibold text-gray-800 mb-1">
+            <h2 className="text-xl font-semibold text-white mb-1">
               {shelter.name}
             </h2>
             <p className="text-sm text-gray-500 mb-2">{shelter.area}</p>
@@ -70,13 +70,13 @@ const SafeShelters = () => {
           </div>
         ))}
       </div>
-      <h2 className="text-2xl font-bold mb-4">🗺️ Shelter Locations Map</h2>
-      <div className="h-[500px] rounded-2xl overflow-hidden shadow-md">
+      <h2 className="text-2xl font-bold text-white mb-6">🗺️ Shelter Locations Map</h2>
+      <div className="h-[500px] rounded-2xl flex items-center justify-center overflow-hidden shadow-md">
       <MapContainer
           center={[22.9734, 78.6569]} // Central India coordinates
           zoom={5}
           scrollWheelZoom={true}
-          className="h-full w-full"
+          className="h-full w-full lg:w-[70vw] rounded-2xl"
         >
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'

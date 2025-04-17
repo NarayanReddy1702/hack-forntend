@@ -12,12 +12,15 @@ const Nav = () => {
   }
 
   const toggleMenu = () => setMenuOpen(!menuOpen)
+ const pageRedirect =()=>{
+   navigate("/")
+ }
 
   return (
     <nav className="relative">
       <div className="flex justify-between items-center px-4 md:px-8 py-4 bg-gray-900 shadow-md">
         <div className="flex items-center">
-          <h1 className="text-2xl font-bold text-blue-600">🌐 DisasterAlert</h1>
+          <h1 onClick={pageRedirect} className="  cursor-pointer text-2xl font-bold text-blue-600">🌐 DisasterAlert</h1>
         </div>
 
         <div className="hidden md:flex gap-8">
