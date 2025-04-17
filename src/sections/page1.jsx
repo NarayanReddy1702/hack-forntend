@@ -70,10 +70,6 @@ function Page1() {
               </span>
             </li>
             <li>
-              🌪 Most Affected Region:{" "}
-              <span className="font-medium">South Asia</span>
-            </li>
-            <li>
               👥 People Affected:{" "}
               <span className="font-medium">1.2 million+</span>
             </li>
@@ -84,23 +80,13 @@ function Page1() {
           <h2 className="text-xl font-semibold mb-4">🛠 Emergency Resources</h2>
           <ul className="space-y-2 text-sm">
             <li>
-              <NavLink to={"/Emergency"} className="text-blue-600 hover:underline">
-                📞 Emergency Hotlines
-              </NavLink>
-            </li>
-            <li>
               <a href="/SafeShelters" className="text-blue-600 hover:underline">
                 🏠 Find Safe Shelters
               </a>
             </li>
             <li>
-              <a href="#" className="text-blue-600 hover:underline">
+              <a href="/FirstAidGuide" className="text-blue-600 hover:underline">
                 🩺 First Aid Guides
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-blue-600 hover:underline">
-                🤝 Relief Organizations
               </a>
             </li>
           </ul>

@@ -30,7 +30,7 @@ const shelters = [
 
 
  const shelterIcon = new L.Icon({
-     iconUrl: "https://icons.veryicon.com/png/o/miscellaneous/iron-police/emergency-shelter.png",
+     iconUrl: "https://cdn-icons-png.freepik.com/512/5973/5973800.png",
      iconSize: [32, 32],
    });
  
