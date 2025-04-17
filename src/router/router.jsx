@@ -5,7 +5,7 @@ import Login from "../UI/Login";
 import Page1 from "../sections/page1";
 import Regions from "../sections/Regions";
 import Resources from "../sections/Resources";
-import Emergency from "../sections/Emergency";
+import SafeShelters from "../components/SafeShelters";
 
 const router= createBrowserRouter([
     {
@@ -32,8 +32,8 @@ const router= createBrowserRouter([
                 element:<Resources/>
             },
             {
-                path:"/Emergency",
-                element:<Emergency/>
+                path:"/SafeShelters",
+                element: <SafeShelters/>
             }
         ]
     }

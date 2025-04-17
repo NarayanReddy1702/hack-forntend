@@ -41,21 +41,6 @@ const DisasterMap = () => {
       
   }, []);
 
-  // useEffect(() => {
-  //   try {
-  //     floods.map((item) => {
-  //       const place = item.eaAreaName;
-  //       fetch(`https://nominatim.openstreetmap.org/search?q=${place}&format=json`)
-  //         .then((res) => res.json())
-  //         .then(res => {
-  //           console.log(res);
-  //            setAffectedLocationInfo([res,...res])
-  //         });
-  //     });
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }, [floods])
 
 
   return (
@@ -87,19 +72,6 @@ const DisasterMap = () => {
           <div>Current Location</div>
         </Popup>
       </Marker>
-      {affectedLocationInfo.map((loc, index) => {
-        return (
-          <Marker
-            position={[loc.lat, loc.lon]}
-            icon={currLocationIcon}
-            key={index}
-          >
-            <Popup>
-              <div>{loc.name}</div>
-            </Popup>
-          </Marker>
-        );
-      })}
     </MapContainer>
   );
 };
