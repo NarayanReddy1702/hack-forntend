@@ -39,30 +39,6 @@ const redirectLogin =()=>{
         >
         Regions
         </NavLink>
-        <NavLink 
-          to="/Resources" 
-          className={({ isActive }) => 
-            `font-medium px-4 py-2 rounded-md transition-all duration-300 ${
-              isActive 
-               ? 'text-blue-600 underline decoration-blue-600 ' 
-                : 'text-gray-700 hover:text-blue-600 hover:underline hover:decoration-blue-600'
-            }`
-          }
-        >
-         Resources
-        </NavLink>
-        <NavLink 
-          to="/Contact" 
-          className={({ isActive }) => 
-            `font-medium px-4 py-2 rounded-md transition-all duration-300 ${
-              isActive 
-               ? 'text-blue-600 underline decoration-blue-600 ' 
-                : 'text-gray-700 hover:text-blue-600 hover:underline hover:decoration-blue-600'
-            }`
-          }
-        >
-          Contact
-        </NavLink>
  </div>
       <div className="hidden md:flex gap-4">
         <button onClick={redirectLogin} className="px-6 cursor-pointer  py-2 font-medium rounded-md border border-blue-600 text-blue-600 hover:bg-blue-50 transition-all duration-300">
