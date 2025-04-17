@@ -13,14 +13,19 @@ const Nav = () => {
 
   const toggleMenu = () => setMenuOpen(!menuOpen)
  const pageRedirect =()=>{
-   navigate("/")
+   navigate("/Home")
+ }
+
+ const handleProblem =()=>{
+  navigate("/ReportAProblem")
+  setMenuOpen(false)
  }
 
   return (
     <nav className="relative">
       <div className="flex justify-between items-center px-4 md:px-8 py-4 bg-gray-900 shadow-md">
         <div className="flex items-center">
-          <h1 onClick={pageRedirect} className="  cursor-pointer text-2xl font-bold text-blue-600">🌐 DisasterAlert</h1>
+          <h1 onClick={pageRedirect} className=" cursor-pointer text-2xl font-bold text-blue-600">🌐 DisasterAlert</h1>
         </div>
 
         <div className="hidden md:flex gap-8">
@@ -30,7 +35,7 @@ const Nav = () => {
               `font-medium px-4 py-2 rounded-md transition-all duration-300 ${
                 isActive
                   ? 'text-blue-600 underline decoration-blue-600 '
-                  : 'text-gray-700 hover:text-blue-600 hover:underline hover:decoration-blue-600'
+                  : 'text-gray-100 hover:text-blue-600 hover:underline hover:decoration-blue-600'
               }`
             }
           >
@@ -42,23 +47,11 @@ const Nav = () => {
               `font-medium px-4 py-2 rounded-md transition-all duration-300 ${
                 isActive
                   ? 'text-blue-600 underline decoration-blue-600 '
-                  : 'text-gray-700 hover:text-blue-600 hover:underline hover:decoration-blue-600'
+                  : 'text-gray-100 hover:text-blue-600 hover:underline hover:decoration-blue-600'
               }`
             }
           >
             Regions
-          </NavLink>
-          <NavLink
-            to="/Resources"
-            className={({ isActive }) =>
-              `font-medium px-4 py-2 rounded-md transition-all duration-300 ${
-                isActive
-                  ? 'text-blue-600 underline decoration-blue-600 '
-                  : 'text-gray-700 hover:text-blue-600 hover:underline hover:decoration-blue-600'
-              }`
-            }
-          >
-            Resources
           </NavLink>
           <NavLink
             to="/Dashboard"
@@ -66,12 +59,15 @@ const Nav = () => {
               `font-medium px-4 py-2 rounded-md transition-all duration-300 ${
                 isActive
                   ? 'text-blue-600 underline decoration-blue-600 '
-                  : 'text-gray-700 hover:text-blue-600 hover:underline hover:decoration-blue-600'
+                  : 'text-gray-100 hover:text-blue-600 hover:underline hover:decoration-blue-600'
               }`
             }
           >
             Dashboard
           </NavLink>
+          <button onClick={handleProblem} className='bg-blue-500 rounded-[5px] text-white px-2 py-1'>
+            Report A Problem 
+          </button>
         </div>
 
         <div className="hidden md:flex gap-4">
@@ -112,19 +108,15 @@ const Nav = () => {
             Regions
           </NavLink>
           <NavLink
-            to="/Resources"
-            onClick={() => setMenuOpen(false)}
-            className="text-white font-medium hover:text-blue-400 transition"
-          >
-            Resources
-          </NavLink>
-          <NavLink
             to="/Dashboard"
             onClick={() => setMenuOpen(false)}
             className="text-white font-medium hover:text-blue-400 transition"
           >
             Dashboard
           </NavLink>
+          <button onClick={handleProblem} className='bg-blue-500 rounded-[5px] text-white px-2 py-1'>
+            Report A Problem 
+          </button>
           <button
             onClick={redirectLogin}
             className="text-blue-400 border border-blue-500 py-2 rounded-md font-medium hover:bg-blue-500 hover:text-white transition"

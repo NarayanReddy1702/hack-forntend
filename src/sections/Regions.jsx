@@ -6,6 +6,7 @@ import {
   FaTemperatureHigh,
 } from "react-icons/fa";
 import Loader from "../components/Loader";
+import CustomCursor from "./CustomCursor";
 
 const Regions = () => {
   const [regions, setRegions] = useState([]);
@@ -36,6 +37,7 @@ const Regions = () => {
 
   return (
  <>
+ <CustomCursor/>
   {regions.length === 0?<Loader/>: <div className="min-h-screen bg-black py-8 px-4 sm:px-6 lg:px-8">
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-12">

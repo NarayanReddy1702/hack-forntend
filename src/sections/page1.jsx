@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import GoogleMap from "../components/GoogleMap";
 import DisasterMap from "../components/Leaflet.jsx";
 import { NavLink } from "react-router-dom";
+import CustomCursor from "./CustomCursor.jsx";
 
 function Page1() {
   // State for alerts
@@ -33,9 +34,10 @@ function Page1() {
 
   return (
     <div className="bg-black font-sans text-gray-800">
+      <CustomCursor />
       <main className="max-w-7xl mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-6 ">
         <section className="md:col-span-2 bg-gray-800 text-white rounded-2xl shadow-xl p-6">
-          <h2 className="text-xl font-semibold mb-4">🌍 Live Disaster Map</h2>
+          <h2 className="text-xl font-semibold mb-4">🌍 Earthquake Map</h2>
           <div className="w-full h-80">
             <DisasterMap />
           </div>
@@ -45,7 +47,7 @@ function Page1() {
           className="bg-gray-800  rounded-xl text-white shadow-xl p-6 py-8 h-110 overflow-auto"
           style={{ scrollbarWidth: "none" }}
         >
-          <h2 className="text-xl font-semibold mb-4">🚨 Latest Alerts</h2>
+          <h2 className="text-xl font-semibold mb-4">🚨 Floods Alerts</h2>
           <ul id="alert-list" className="space-y-6  text-sm h-full">
             {floods.map((flood, index) => (
               <li key={index} className="border-l-4 border-blue-600 pl-3">

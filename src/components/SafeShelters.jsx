@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import CustomCursor from "../sections/CustomCursor";
 
 const shelters = [
   {
@@ -38,6 +39,7 @@ const shelters = [
 const SafeShelters = () => {
   return (
     <div className="lg:px-49 px-6 py-6 mx-auto bg-black">
+      <CustomCursor/>
       <h1 className="text-2xl lg:text-3xl font-bold text-white mb-6">
         🏠 Safe Shelters Nearby
       </h1>

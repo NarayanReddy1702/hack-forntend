@@ -16,19 +16,19 @@ function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h3 className="font-semibold mb-2 text-blue-600">Quick Links</h3>
+          <h3 className="font-semibold mb-2 text-lg text-blue-600">Quick Links</h3>
           <ul className="space-y-1">
-            <li><a href="#" className="hover:text-blue-600 transition">Home</a></li>
-            <li><a href="#" className="hover:text-blue-600 transition">Live Map</a></li>
-            <li><a href="#" className="hover:text-blue-600 transition">Emergency Resources</a></li>
-            <li><a href="#" className="hover:text-blue-600 transition">Contact</a></li>
+            <li><a href="/" className="hover:text-blue-600 text-sm transition">Home</a></li>
+            <li><a href="/Dashboard" className="hover:text-blue-600 text-sm transition">Live Map</a></li>
+            <li><a href="/SafeShelters" className="hover:text-blue-600 text-sm transition">Safe Shelters</a></li>
+            <li><a href="/ReportAProblem" className="hover:text-blue-600 text-sm transition">Report a problem</a></li>
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
-          <h3 className="font-semibold mb-2 text-blue-600">Contact Us</h3>
-          <ul className="space-y-1 text-gray-600">
+          <h3 className="font-semibold mb-2 text-lg text-blue-600">Contact Us</h3>
+          <ul className="space-y-1 text-sm text-gray-600">
             <li>📧 support@disasteralert.com</li>
             <li>📞 +1 (800) 123-4567</li>
             <li>📍 123 Safety Lane, Secure City</li>

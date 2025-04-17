@@ -46,11 +46,11 @@ const firstAidTips = [
 
 const FirstAidGuide = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-red-600 mb-4">
-        ⛑️ First Aid Guide
+    <div className=" bg-black  p-6">
+      <h1 className="text-3xl font-bold text-white mb-4 text-center">
+        ⛑️ First Aid <span className="text-blue-600">Guide</span>
       </h1>
-      <p className="text-gray-700 mb-6">
+      <p className="text-gray-500 max-w-3xl mb-6 mx-auto  text-sm text-center">
         Here's a quick guide to handling common emergencies. This is not a
         replacement for professional training or medical help — always call
         emergency services when needed.
@@ -60,15 +60,15 @@ const FirstAidGuide = () => {
         {firstAidTips.map((tip, index) => (
           <>
             <div
-              key={index}
-              className="bg-white p-5 rounded-xl shadow-md border-l-4 border-red-500"
+            
+              className="bg-gray-800 p-5 rounded-xl max-w-3xl mx-auto shadow-md border-l-4 border-blue-500"
             >
-              <h2 className="text-xl font-semibold text-red-700 mb-1">
+              <h2 className="text-xl font-semibold text-blue-700 mb-1">
                 {tip.title}
               </h2>
-              <p className="text-gray-600">{tip.description}</p>
+              <p  className="text-gray-50">{tip.description}</p>
             </div>
-            {index != 7 ? <FaArrowDown style={{textAlign: "center", width: "100%", fontSize: "2rem"}}/> : null}
+            {index != 7 ? <FaArrowDown key={index} style={{textAlign: "center",color:"white", width: "100%", fontSize: "1.5rem" }}/> : null}
             
           </>
         ))}

@@ -4,9 +4,10 @@ import Home from "../sections/Home";
 import Login from "../UI/Login";
 import Page1 from "../sections/page1";
 import Regions from "../sections/Regions";
-import Resources from "../sections/Resources";
+
 import SafeShelters from "../components/SafeShelters";
 import FirstAidGuide from "../components/FirstAidSteps";
+import ReportAProblem from "../sections/ReportAProblem";
 
 const router= createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router= createBrowserRouter([
             {
                 path: "/",
                 element: <Home/>
+            },
+            {
+              path:"/Home",
+              element:<Home/>
             },
             {
                 path:"/Login",
@@ -28,9 +33,6 @@ const router= createBrowserRouter([
             {
                 path:"/Regions",
                 element:<Regions/>
-            },{
-                path:"/Resources",
-                element:<Resources/>
             },
             {
                 path:"/SafeShelters",
@@ -39,6 +41,10 @@ const router= createBrowserRouter([
             {
                 path: "/FirstAidGuide",
                 element: <FirstAidGuide/>
+            },
+            {
+                path:"/ReportAProblem",
+                element:<ReportAProblem/>
             }
         ]
     }
