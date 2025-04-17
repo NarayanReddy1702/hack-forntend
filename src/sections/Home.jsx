@@ -20,7 +20,6 @@ const Home = () => {
     Get Started
   </button>
 </div>
-
 </>
   )
 }
