@@ -88,7 +88,7 @@ function Page1() {
               </a>
             </li>
             <li>
-              <a href="#" className="text-blue-600 hover:underline">
+              <a href="/SafeShelters" className="text-blue-600 hover:underline">
                 🏠 Find Safe Shelters
               </a>
             </li>
